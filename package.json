@@ -12,7 +12,7 @@
     "format": "prettier --write src/",
     "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"src/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\"",
     "lint:style": "stylelint \"src/**/*.{vue,css,scss}\" --fix",
-    "check": "run-p type-check lint lint:style spellcheck --",
+    "check": "npm run type-check && npm run lint && npm run lint:style && npm run spellcheck --",
     "prepare": "husky install",
     "commit": "git-cz",
     "commitlint": "commitlint --edit $1"
